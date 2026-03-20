@@ -6,10 +6,15 @@ Created by **[Dany Walls](https://danywalls.com)** (Twitter: [@danywalls](https:
 
 ## ⚡ Quick Install
 
-Run directly via `npx`:
+Run directly via `npx` (requires an Unsplash Access Key):
 
 ```bash
-npx unsplashx
+npx unsplashx <YOUR_ACCESS_KEY>
+```
+
+You can also set the key as an environment variable:
+```bash
+UNSPLASH_ACCESS_KEY=<YOUR_ACCESS_KEY> npx unsplashx
 ```
 
 ## Features
@@ -31,10 +36,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "unsplash": {
       "command": "npx",
-      "args": ["-y", "unsplashx"],
-      "env": {
-        "UNSPLASH_ACCESS_KEY": "YOUR_ACCESS_KEY"
-      }
+      "args": ["-y", "unsplashx", "YOUR_ACCESS_KEY_HERE"]
     }
   }
 }
