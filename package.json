@@ -1,6 +1,6 @@
 {
   "name": "unsplashx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Unsplash MCP Server",
   "main": "index.js",
   "type": "module",
