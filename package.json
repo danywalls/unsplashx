@@ -19,13 +19,23 @@
   },
   "keywords": [
     "mcp",
-    "unsplash"
+    "mcp-server",
+    "unsplash",
+    "images",
+    "photography",
+    "markdown",
+    "html"
   ],
   "author": "Dany Walls",
-  "homepage": "https://danywalls.com",
-  "license": "ISC",
+  "homepage": "https://github.com/danywalls/unsplashx#readme",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "result.png"
+  ],
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.27.1",
-    "zod": "^4.3.6"
+    "@modelcontextprotocol/sdk": "^1.27.1"
   }
 }

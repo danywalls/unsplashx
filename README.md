@@ -1,6 +1,8 @@
-# UnsplashX MCP
+# UnSplashX
 
-Model Context Protocol (MCP) server for the Unsplash API. Use it to find, download, and insert images into local projects. Built for developers and AI agents (e.g. Claude, Cursor).
+**UnSplashX** it is a Model Context Protocol (MCP) server for the Unsplash API. Use it to find, download, and insert high-quality images directly into your local projects. Built for developers and AI agents (e.g., Claude, Cursor).
+
+![UnSplashX Result showing automated image insertion](./result.png)
 
 ### Why I built this
 I got tired of AI-generated images. I wanted a fast way to use real photography in my projects and, most importantly, make sure real photographers get the credit they deserve. That's why I built **UnsplashX**. 
