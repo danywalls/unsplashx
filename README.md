@@ -1,35 +1,21 @@
 # UnsplashX MCP
 
-Model Context Protocol (MCP) server for the Unsplash API. Use it to find, download, and insert images into local projects. Built for developers and AI agents (e.g. Claude, Cursor).
+Model Context Protocol (MCP) server for the Unsplash API.
 
-Created by **[Dany Walls](https://danywalls.com)** (Twitter: [@danywalls](https://twitter.com/danywalls)).
+I got tired of AI-generated images. I wanted a fast way to use real photography in my projects and, most importantly, make sure real photographers get the credit they deserve. That's why I built **UnsplashX**.
+
+With this MCP server, your AI agent can search, download, and insert Unsplash images directly into your files while always respecting mandatory attribution.
 
 ## ⚡ Quick Install
 
-Run directly via `npx` (requires an Unsplash Access Key):
+Add it to your favorite IDE with one click:
 
-```bash
-npx unsplashx <YOUR_ACCESS_KEY>
-```
+**Cursor:** [<img src="https://img.shields.io/badge/Add%20to-Cursor-000?style=for-the-badge&logo=cursor&logoColor=white" alt="Add to Cursor">](https://cursor.com/en/install-mcp?name=unsplashx&config=eyJjb21tYW5kIjoibnB4IC15IHVuc3BsYXNoeCJ9)
+**VS Code:** [<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=for-the-badge&label=Add%20to&color=0098FF" alt="Add to VS Code">](https://vscode.dev/redirect/mcp/install?name=unsplashx&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22unsplashx%22%5D%2C%22env%22%3A%7B%7D%7D)
 
-You can also set the key as an environment variable:
-```bash
-UNSPLASH_ACCESS_KEY=<YOUR_ACCESS_KEY> npx unsplashx
-```
+## Manual Setup
 
-## Features
-- **Search**: Find Unsplash photos by query, orientation, and color.
-- **Auto-Credits**: Injects mandatory photographer attribution in Markdown/HTML.
-- **Download Tracking**: Triggers `GET /photos/:id/download` per API requirements.
-- **CDN resizing**: Optimized URLs via built-in parameters (`w`, `fit`, etc.).
-
-## Setup
-
-### 1. Get Access Key
-Create an app at [Unsplash Developers](https://unsplash.com/developers) to get your Access Key.
-
-### 2. Configure Client (e.g. Claude Desktop)
-Add to `claude_desktop_config.json`:
+If you prefer to configure Claude Desktop or Cursor manually:
 
 ```json
 {
@@ -42,15 +28,9 @@ Add to `claude_desktop_config.json`:
 }
 ```
 
-## Tools
+## Features
+- **Search**: Discovery of photos by keyword, orientation, and color.
+- **Auto-Credits**: Injects mandatory photographer attribution in Markdown/HTML.
+- **Download Tracking**: Triggers required Unsplash API tracking on every download.
 
-- `search_photos`: Search imagery with filters.
-- `insert_to_page`: Add images + attribution to local files (MD/HTML).
-- `download_to_project`: Save files to a local directory.
-- `get_photo`: Get technical metadata for a photo ID.
-
-## Use Case: danywalls.com
-Automate image workflows for Dany's projects. Ask the agent: *"Find a mountain photo and insert it into post.md"*. The MCP handles search, tracking, and attribution.
-
-## License
-MIT
+Built by [Dany Walls](https://danywalls.com).
