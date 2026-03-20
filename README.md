@@ -4,6 +4,10 @@ Model Context Protocol (MCP) server for the Unsplash API. Use it to find, downlo
 
 Created by **[Dany Walls](https://danywalls.com)** (Twitter: [@danywalls](https://twitter.com/danywalls)).
 
+## ⚡ Quick Install
+
+[<img src="https://img.shields.io/badge/Install%20in-Cursor-blue?style=for-the-badge&logo=cursor">](https://cursor.com/mcp/install?url=https%3A%2F%2Fsmithery.ai%2Fapi%2Fmcp%2Funsplashx)
+
 ## Features
 - **Search**: Find Unsplash photos by query, orientation, and color.
 - **Auto-Credits**: Injects mandatory photographer attribution in Markdown/HTML.
