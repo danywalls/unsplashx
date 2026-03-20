@@ -11,11 +11,12 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
+const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY || process.argv[2];
 const API_BASE = "https://api.unsplash.com";
 
 if (!UNSPLASH_ACCESS_KEY) {
-  console.error("Error: UNSPLASH_ACCESS_KEY environment variable is required");
+  console.error("Error: UNSPLASH_ACCESS_KEY is required.");
+  console.error("Usage: npx unsplashx <YOUR_ACCESS_KEY> or set the UNSPLASH_ACCESS_KEY environment variable.");
   process.exit(1);
 }
 
