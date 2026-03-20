@@ -6,7 +6,11 @@ Created by **[Dany Walls](https://danywalls.com)** (Twitter: [@danywalls](https:
 
 ## ⚡ Quick Install
 
-[<img src="https://img.shields.io/badge/Install%20in-Cursor-blue?style=for-the-badge&logo=cursor">](cursor://anysphere.cursor-deeplink/mcp/install?name=unsplashx&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsInVuc3BsYXNoeCJdLCJlbnYiOnsiVU5TUExBU0hfQUNDRVNTX0tFWSI6IiJ9fQ==)
+Run directly via `npx`:
+
+```bash
+npx unsplashx
+```
 
 ## Features
 - **Search**: Find Unsplash photos by query, orientation, and color.
