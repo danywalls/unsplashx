@@ -1,0 +1,17 @@
+{
+  "name": "unsplashx",
+  "version": "1.0.0",
+  "description": "Unsplash MCP Server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "unsplashx": "index.js"
+  },
+  "keywords": ["mcp", "unsplash"],
+  "author": "Dany Walls",
+  "homepage": "https://danywalls.com",
+  "license": "ISC"
+}
