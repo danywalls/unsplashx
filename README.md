@@ -2,8 +2,6 @@
 
 Model Context Protocol (MCP) server for the Unsplash API. Use it to find, download, and insert images into local projects. Built for developers and AI agents (e.g. Claude, Cursor).
 
-Created by **[Dany Walls](https://danywalls.com)** (Twitter: [@danywalls](https://twitter.com/danywalls)).
-
 ### Why I built this
 I got tired of AI-generated images. I wanted a fast way to use real photography in my projects and, most importantly, make sure real photographers get the credit they deserve. That's why I built **UnsplashX**. 
 
@@ -41,7 +39,7 @@ Add to `claude_desktop_config.json`:
 - `download_to_project`: Save files to a local directory.
 - `get_photo`: Get technical metadata for a photo ID.
 
-## Use Case: danywalls.com
+## Example
 Automate image workflows for your projects. Ask the agent: *"Find a mountain photo and insert it into post.md"*. The MCP handles search, tracking, and attribution.
 
 ## License
