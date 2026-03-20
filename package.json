@@ -1,9 +1,16 @@
 {
   "name": "unsplashx",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Unsplash MCP Server",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danywalls/unsplashx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danywalls/unsplashx/issues"
+  },
   "scripts": {
     "start": "node index.js"
   },
