@@ -6,7 +6,7 @@ Created by **[Dany Walls](https://danywalls.com)** (Twitter: [@danywalls](https:
 
 ## ⚡ Quick Install
 
-[<img src="https://img.shields.io/badge/Install%20in-Cursor-blue?style=for-the-badge&logo=cursor">](https://cursor.com/mcp/install?url=https%3A%2F%2Fsmithery.ai%2Fapi%2Fmcp%2Funsplashx)
+[<img src="https://img.shields.io/badge/Install%20in-Cursor-blue?style=for-the-badge&logo=cursor">](cursor://anysphere.cursor-deeplink/mcp/install?name=unsplashx&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsInVuc3BsYXNoeCJdLCJlbnYiOnsiVU5TUExBU0hfQUNDRVNTX0tFWSI6IiJ9fQ==)
 
 ## Features
 - **Search**: Find Unsplash photos by query, orientation, and color.
