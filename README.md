@@ -37,8 +37,8 @@ Add to `claude_desktop_config.json`:
 ## Tools
 
 - `search_photos`: Search imagery with filters.
-- `insert_to_page`: Add images + attribution to local files (MD/HTML).
-- `download_to_project`: Save files to a local directory.
+- `insert_to_page`: Add images + attribution to local files (MD/HTML). Supports `width`, `height`, and `quality` parameters.
+- `download_to_project`: Save files to a local directory. Supports `width`, `height`, and `quality` parameters.
 - `get_photo`: Get technical metadata for a photo ID.
 
 ## Example

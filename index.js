@@ -23,7 +23,7 @@ if (!UNSPLASH_ACCESS_KEY) {
 const server = new Server(
   {
     name: "unsplash-mcp",
-    version: "1.0.0",
+    version: "1.1.0",
   },
   {
     capabilities: {
@@ -94,6 +94,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             file_path: { type: "string", description: "The absolute path to the target file" },
             alt_text: { type: "string", description: "Alt text for the image" },
             width: { type: "number", description: "Optional width in pixels" },
+            height: { type: "number", description: "Optional height in pixels" },
+            quality: { type: "number", description: "Optional quality (1-100)", default: 80 },
             format: { type: "string", enum: ["markdown", "html"], default: "markdown" }
           },
           required: ["photo_id", "file_path", "alt_text"],
@@ -107,7 +109,10 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {
             photo_id: { type: "string", description: "The Unsplash photo ID" },
             destination_dir: { type: "string", description: "Absolute path to the destination directory" },
-            file_name: { type: "string", description: "Desired file name (e.g., 'hero.jpg')" }
+            file_name: { type: "string", description: "Desired file name (e.g., 'hero.jpg')" },
+            width: { type: "number", description: "Optional width in pixels" },
+            height: { type: "number", description: "Optional height in pixels" },
+            quality: { type: "number", description: "Optional quality (1-100)", default: 80 }
           },
           required: ["photo_id", "destination_dir", "file_name"],
         },
@@ -161,8 +166,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         // Track download
         await fetchUnsplash(`/photos/${args.photo_id}/download`);
 
-        const baseUrl = photo.urls.regular;
-        const finalUrl = args.width ? `${baseUrl}&w=${args.width}` : baseUrl;
+        const url = new URL(photo.urls.regular);
+        if (args.width) url.searchParams.set("w", args.width);
+        if (args.height) url.searchParams.set("h", args.height);
+        if (args.quality) url.searchParams.set("q", args.quality);
+        const finalUrl = url.toString();
+        
         const attribution = `\n\n_Photo by [${photo.user.name}](${photo.user.links.html}?utm_source=unsplashx&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=unsplashx&utm_medium=referral)_`;
         
         let snippet = "";
@@ -184,7 +193,13 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         // Track download
         await fetchUnsplash(`/photos/${args.photo_id}/download`);
 
-        const response = await fetch(photo.urls.full);
+        const url = new URL(photo.urls.regular);
+        if (args.width) url.searchParams.set("w", args.width);
+        if (args.height) url.searchParams.set("h", args.height);
+        if (args.quality) url.searchParams.set("q", args.quality);
+        const finalUrl = url.toString();
+
+        const response = await fetch(finalUrl);
         const arrayBuffer = await response.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
 
